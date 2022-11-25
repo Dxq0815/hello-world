@@ -1,9 +1,24 @@
-char* StrCpy(char* src){
-    assert(NULL != src);
-    int len = 0;
-    while(*src++ != '\0')
+#include<stdio.h>
+#include<assert.h>
+char* my_strcpy(char* dest, const char* src)
 {
-   len++
+	//指针断言
+	assert(dest != NULL);
+	assert(src!= NULL);
+	//由于在赋值过程中，dest的指向会被更改
+	//所以先保留首元素地址
+	char* ret = dest;
+	while (*dest++ = *src++)
+	{
+		;
+	}
+	return ret;
 }
-   return len;
+int main()
+{
+	char arr1[30] = "hello";
+	char arr2[] = "hello world!!!!!!";
+	my_strcpy(arr1, arr2);
+	printf("%s", arr1);
+	return 0;
 }

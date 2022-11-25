@@ -1,0 +1,9 @@
+char* StrCpy(char* src){
+    assert(NULL != src);
+    int len = 0;
+    while(*src++ != '\0')
+{
+   len++
+}
+   return len;
+}
